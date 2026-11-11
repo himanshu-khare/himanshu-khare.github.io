@@ -139,6 +139,48 @@ body {
   }
 }
 
+/* Navigation Links */
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #A1A1AA;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.nav-link:hover {
+  color: #F4F4F5;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+/* Nav CTA Button (Balanced & Proportional) */
+.nav-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #FFFFFF;
+  color: #08090C;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.nav-cta-btn:hover {
+  background: #E4E4E7;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+}
+
 /* Cards & Surfaces (Crafted with subtle top highlight) */
 .card-clean {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.005) 100%), #101114;
