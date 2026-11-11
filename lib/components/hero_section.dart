@@ -139,6 +139,9 @@ class _HeroSectionState extends State<HeroSection> {
                 div(
                   classes: 'phone-clean-frame relative',
                   [
+                    // Dynamic Island pill
+                    div(classes: 'phone-dynamic-island', []),
+
                     // Real Screenshot Viewport
                     div(
                       classes: 'phone-screen-viewport',
@@ -195,3 +198,4 @@ class _HeroSectionState extends State<HeroSection> {
     );
   }
 }
+

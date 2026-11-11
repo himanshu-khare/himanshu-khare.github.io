@@ -12,22 +12,41 @@ class HomePage extends StatelessComponent {
   @override
   Component build(BuildContext context) {
     return div(
-      classes: 'min-h-screen flex flex-col bg-[#0A0A0A] text-[#F4F4F5] relative selection:bg-white/20 selection:text-white',
+      classes:
+          'min-h-screen flex flex-col bg-[#08090B] text-[#F4F4F5] relative selection:bg-white/20 selection:text-white overflow-hidden',
       [
-        // Section 1: Minimalist Navbar
-        const Navbar(),
+        // Top Hairline Gleam
+        div(classes: 'site-top-gleam', []),
 
-        // Section 2: Calm, Editorial Hero Section with Real App Showcase Frame
-        const HeroSection(),
+        // Tactile Micro-Noise Texture
+        div(classes: 'site-noise-overlay', []),
 
-        // Section 3: Selected Work & Firebase Project Gallery (Real Screenshots)
-        const WorkGallery(),
+        // Ambient Top Horizon Light
+        div(classes: 'site-ambient-light', []),
 
-        // Section 4: Compact Experience & Skills List
-        const ExperienceSkillsSection(),
+        // Precision Engineering Coordinate Grid
+        div(classes: 'site-grid-pattern', []),
 
-        // Minimalist Footer
-        const Footer(),
+        // Primary Content Stream
+        div(
+          classes: 'relative z-10 flex flex-col min-h-screen',
+          [
+            // Section 1: Minimalist Navbar
+            const Navbar(),
+
+            // Section 2: Calm, Editorial Hero Section with Real App Showcase Frame
+            const HeroSection(),
+
+            // Section 3: Selected Work & Firebase Project Gallery (Real Screenshots)
+            const WorkGallery(),
+
+            // Section 4: Compact Experience & Skills List
+            const ExperienceSkillsSection(),
+
+            // Minimalist Footer
+            const Footer(),
+          ],
+        ),
       ],
     );
   }
