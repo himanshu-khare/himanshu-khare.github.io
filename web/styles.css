@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #090D16;
+  --bg-surface: #0E1526;
+  --bg-card: rgba(17, 24, 39, 0.7);
+  --bg-card-hover: rgba(22, 31, 48, 0.85);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-highlight: rgba(56, 189, 248, 0.3);
+  --accent-blue: #38BDF8;
+  --accent-indigo: #6366F1;
+  --accent-cyan: #4CD7F6;
+  --accent-emerald: #34D399;
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  overflow-x: hidden;
+  position: relative;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 85% 30%, rgba(99, 102, 241, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 15% 70%, rgba(76, 215, 246, 0.05) 0%, transparent 40%);
+}
+
+/* Code & Tech font */
+.font-mono, code, pre, .metric-val {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(14, 21, 38, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-card {
+  background: rgba(17, 24, 39, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: rgba(22, 31, 48, 0.85);
+  border-color: rgba(56, 189, 248, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -10px rgba(56, 189, 248, 0.15);
+}
+
+/* Ambient Glow */
+.ambient-glow {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Text Gradients */
+.text-gradient-blue {
+  background: linear-gradient(135deg, #FFFFFF 0%, #38BDF8 60%, #818CF8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #4CD7F6 0%, #38BDF8 50%, #A78BFA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090D16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Phone Mockup Frame (iPhone 16 Pro / Pixel 9 Pro) */
+.phone-device-frame {
+  position: relative;
+  width: 320px;
+  height: 640px;
+  background: #000000;
+  border-radius: 48px;
+  border: 4px solid #334155;
+  box-shadow: 
+    0 0 0 2px #0f172a,
+    0 25px 50px -12px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(56, 189, 248, 0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 640px) {
+  .phone-device-frame {
+    width: 340px;
+    height: 680px;
+    border-radius: 52px;
+  }
+}
+
+.dynamic-island {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 96px;
+  height: 24px;
+  background: #000000;
+  border-radius: 16px;
+  z-index: 40;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+}
+
+.camera-lens {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #0a0a0a;
+  border: 1px solid #1e293b;
+}
+
+.sensor-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #101827;
+}
+
+.phone-screen {
+  flex: 1;
+  background: #0B1120;
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 48px;
+}
+
+.phone-home-indicator {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 9999px;
+  z-index: 40;
+}
+
+/* Architecture X-Ray Flip Card */
+.xray-container {
+  perspective: 1000px;
+  position: relative;
+  min-height: 420px;
+}
+
+.xray-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.xray-flipped {
+  transform: rotateY(180deg);
+}
+
+.xray-front, .xray-back {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 16px;
+}
+
+.xray-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+  background: radial-gradient(circle at 50% 50%, #0F172A 0%, #090D16 100%);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  box-shadow: inset 0 0 25px rgba(56, 189, 248, 0.1);
+}
+
+/* Circuit grid texture for X-Ray mode */
+.circuit-pattern {
+  background-image: 
+    linear-gradient(rgba(56, 189, 248, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Interactive Modal Backdrop */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 7, 13, 0.85);
+  backdrop-filter: blur(12px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-content {
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Button pulse */
+.btn-glow {
+  position: relative;
+  transition: all 0.3s ease;
+}
+.btn-glow:hover {
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+}
+
+/* Live Ping Indicator */
+.ping-dot {
+  position: relative;
+}
+.ping-dot::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: inherit;
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+/* Print styles for Resume */
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+  .no-print, nav, footer, .btn-glow {
+    display: none !important;
+  }
+  .modal-backdrop {
+    position: static;
+    background: transparent;
+    padding: 0;
+  }
+}
