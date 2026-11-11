@@ -13,7 +13,7 @@ class HomePage extends StatelessComponent {
   Component build(BuildContext context) {
     return div(
       classes:
-          'min-h-screen flex flex-col bg-[#08090B] text-[#F4F4F5] relative selection:bg-white/20 selection:text-white overflow-hidden',
+          'min-h-screen flex flex-col bg-[#08090C] text-[#F4F4F5] relative selection:bg-white/20 selection:text-white',
       [
         // Top Hairline Gleam
         div(classes: 'site-top-gleam', []),
@@ -21,11 +21,11 @@ class HomePage extends StatelessComponent {
         // Tactile Micro-Noise Texture
         div(classes: 'site-noise-overlay', []),
 
-        // Ambient Top Horizon Light
-        div(classes: 'site-ambient-light', []),
-
-        // Precision Engineering Coordinate Grid
-        div(classes: 'site-grid-pattern', []),
+        // Fixed Full-Screen Modern Background Canvas
+        div(classes: 'site-bg-canvas', [
+          div(classes: 'site-ambient-light', []),
+          div(classes: 'site-grid-pattern', []),
+        ]),
 
         // Primary Content Stream
         div(

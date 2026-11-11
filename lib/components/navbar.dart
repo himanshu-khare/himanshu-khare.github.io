@@ -15,7 +15,7 @@ class Navbar extends StatelessComponent {
           classes:
               'site-container h-16 flex items-center justify-between',
           [
-            // Left: Name & subtle status dot
+            // Left: Clean Name
             a(
               href: '#',
               classes:
@@ -25,17 +25,6 @@ class Navbar extends StatelessComponent {
                   classes:
                       'text-sm font-semibold tracking-tight text-[#F4F4F5] group-hover:text-white transition-colors',
                   [text('Himanshu Khare')],
-                ),
-                div(
-                  classes:
-                      'hidden sm:flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20',
-                  [
-                    span(
-                      classes: 'w-1.5 h-1.5 rounded-full bg-emerald-400',
-                      [],
-                    ),
-                    text('Available for Senior Roles'),
-                  ],
                 ),
               ],
             ),

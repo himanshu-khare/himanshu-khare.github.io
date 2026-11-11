@@ -28,7 +28,7 @@ void main() {
     },
     head: [
       script(src: 'https://cdn.tailwindcss.com'),
-      link(rel: 'stylesheet', href: 'styles.css'),
+      link(rel: 'stylesheet', href: 'styles.css?v=3.0'),
       link(rel: 'icon', href: 'favicon.ico'),
     ],
     body: const App(),
