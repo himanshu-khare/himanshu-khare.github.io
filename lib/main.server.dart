@@ -12,17 +12,17 @@ void main() {
   );
 
   runApp(Document(
-    title: 'Himanshu Khare | Senior Mobile Systems Architect (Flutter • Android • iOS)',
+    title: 'Himanshu Khare — Senior Mobile Developer (Flutter • Android • iOS)',
     lang: 'en',
     meta: {
       'description':
-          'Senior Mobile Systems Architect with 6.5+ years experience building production apps across Flutter, Android (Kotlin), and iOS (Swift). Offline-first SSOT, Dart Isolates, binary Protobuf streaming, and native Bluetooth hardware.',
+          'Himanshu Khare — Senior Mobile Developer with 6.5+ years experience building production apps across Flutter, Android (Kotlin), and iOS (Swift). Offline-first SSOT, Dart Isolates, binary Protobuf streaming, and native Bluetooth hardware.',
       'viewport': 'width=device-width, initial-scale=1.0',
-      'theme-color': '#090D16',
+      'theme-color': '#0A0A0A',
       'author': 'Himanshu Khare',
-      'og:title': 'Himanshu Khare | Senior Mobile Systems Architect',
+      'og:title': 'Himanshu Khare — Senior Mobile Developer',
       'og:description':
-          '6.5+ Yrs Exp • 25+ Apps Shipped • Offline-First SSOT • Tawft UI (100+ Widgets)',
+          'Senior Mobile Developer building offline-first Flutter & native apps.',
       'og:type': 'website',
       'og:url': 'https://himanshu-khare.github.io/',
     },

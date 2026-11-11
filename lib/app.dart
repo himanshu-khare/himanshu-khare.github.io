@@ -14,7 +14,7 @@ class AppState extends State<App> {
   @override
   Component build(BuildContext context) {
     return div(
-      classes: 'antialiased selection:bg-sky-500/30 selection:text-sky-300',
+      classes: 'antialiased selection:bg-white/20 selection:text-white',
       [
         const HomePage(),
       ],

@@ -1,87 +1,33 @@
 import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
-import '../components/app_inspector_modal.dart';
-import '../components/bento_architecture_showcase.dart';
-import '../components/experience_timeline.dart';
+import '../components/experience_skills_section.dart';
 import '../components/footer.dart';
-import '../components/hero_phone_dock.dart';
+import '../components/hero_section.dart';
 import '../components/navbar.dart';
-import '../components/project_vault_grid.dart';
-import '../components/resume_modal.dart';
-import '../components/skills_matrix.dart';
-import '../models/project_model.dart';
+import '../components/work_gallery.dart';
 
-class HomePage extends StatefulComponent {
+class HomePage extends StatelessComponent {
   const HomePage({super.key});
-
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  ProjectModel? _inspectingProject;
-  bool _showResumeModal = false;
-
-  void _openResume() {
-    setState(() {
-      _showResumeModal = true;
-    });
-  }
-
-  void _closeResume() {
-    setState(() {
-      _showResumeModal = false;
-    });
-  }
-
-  void _inspectProject(ProjectModel project) {
-    setState(() {
-      _inspectingProject = project;
-    });
-  }
-
-  void _closeInspectProject() {
-    setState(() {
-      _inspectingProject = null;
-    });
-  }
 
   @override
   Component build(BuildContext context) {
     return div(
-      classes: 'min-h-screen flex flex-col bg-[#090D16] text-slate-100 relative',
+      classes: 'min-h-screen flex flex-col bg-[#0A0A0A] text-[#F4F4F5] relative selection:bg-white/20 selection:text-white',
       [
-        // Top Sticky Navbar
-        Navbar(onOpenResume: _openResume),
+        // Section 1: Minimalist Navbar
+        const Navbar(),
 
-        // Hero with Interactive CSS Phone Dock
-        HeroPhoneDock(onOpenResume: _openResume),
+        // Section 2: Calm, Editorial Hero Section with Real App Showcase Frame
+        const HeroSection(),
 
-        // Apple Bento Grid Flagship Showcase with Architecture X-Ray Flip Toggle
-        BentoArchitectureShowcase(onInspectProject: _inspectProject),
+        // Section 3: Selected Work & Firebase Project Gallery (Real Screenshots)
+        const WorkGallery(),
 
-        // Dynamic Firebase 25+ Projects Vault
-        ProjectVaultGrid(onSelectProject: _inspectProject),
+        // Section 4: Compact Experience & Skills List
+        const ExperienceSkillsSection(),
 
-        // 6.5+ Yrs Experience Timeline
-        const ExperienceTimeline(),
-
-        // Technical Skills Matrix
-        const SkillsMatrix(),
-
-        // Footer
-        Footer(onOpenResume: _openResume),
-
-        // Inspector Modal (when project is clicked)
-        if (_inspectingProject != null)
-          AppInspectorModal(
-            project: _inspectingProject!,
-            onClose: _closeInspectProject,
-          ),
-
-        // Digital Resume Modal (when resume is clicked)
-        if (_showResumeModal)
-          ResumeModal(onClose: _closeResume),
+        // Minimalist Footer
+        const Footer(),
       ],
     );
   }
