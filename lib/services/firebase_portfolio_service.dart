@@ -17,8 +17,17 @@ class FirebasePortfolioService {
       description:
           'Solo Senior Mobile Architect from scratch. Architected an Offline-First Single Source of Truth system using Drift (SQLite) and Riverpod with atomic background sync to SAP BTP. Built a Server-Driven Dynamic Form Engine, multi-tenant workspace switching, and bridged native Bluetooth Wireless Ultrasonic Testing (UT) hardware gauges via Pigeon and Kotlin Coroutines.',
       category: ProjectCategory.enterprise,
-      folderName: 'feedbacks',
-      fileNames: ['fb2.png', 'Screenshot 2022-12-19 at 12.44.46 AM.png'],
+      folderName: 'asint_edge',
+      fileNames: [
+        'first.webp',
+        'second.webp',
+        'third.webp',
+        'fourth.webp',
+        'fifth.webp',
+        'six.webp',
+        'seventh.webp',
+        'eigth.webp'
+      ],
       techStack: ['Flutter', 'Drift (SQLite)', 'Riverpod', 'Dart Isolates', 'Pigeon', 'Kotlin', 'SAP BTP'],
       architectureMetrics: {'Architecture': 'Offline-First SSOT', 'Hardware': 'Bluetooth UT Gauge'},
       architectureFlow: 'UI -> Riverpod -> Drift SQLite -> Worker Isolates -> Pigeon BLE -> SAP BTP',
@@ -47,8 +56,8 @@ class FirebasePortfolioService {
       description:
           'Curated developer platform and web directory featuring 100+ reusable Flutter UI widgets, complex animations, and interactive design patterns. Built with Jaspr (Dart Web) and backed by Supabase edge services.',
       category: ProjectCategory.opensource,
-      folderName: 'countdown',
-      fileNames: ['1st.webp', '2nd.webp', '3rd.webp', '4th.webp'],
+      folderName: 'tawft',
+      fileNames: ['showcase.jpg'],
       techStack: ['Jaspr (Dart)', 'Flutter Web', 'Supabase', 'Tailwind CSS'],
       architectureMetrics: {'Components': '100+ Widgets', 'Deployment': 'GitHub Pages'},
       architectureFlow: 'Jaspr Static Pre-render -> Client Hydration -> Supabase Realtime',

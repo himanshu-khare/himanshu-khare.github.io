@@ -12,37 +12,61 @@ class HeroSection extends StatefulComponent {
 class _HeroSectionState extends State<HeroSection> {
   int _currentShotIndex = 0;
 
-  // Real app screenshots hosted in Firebase Storage (portfolio-e3e4a.appspot.com)
+  // Real app screenshots hosted in Firebase Storage (asint_edge, asint_intellisuite, tawft)
   static final List<Map<String, String>> _showcaseScreenshots = [
     {
-      'title': 'Motilal Oswal Trader',
-      'sub': 'Trading Desk & Order Execution',
+      'title': 'AsInt Edge Mobile',
+      'sub': 'Offline-First Edge Inspection & Drift SQLite',
       'url':
-          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/mo-trader%2F1st.webp?alt=media',
+          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/asint_edge%2Ffirst.webp?alt=media',
     },
     {
-      'title': 'Tawft UI & Countdown',
-      'sub': 'Milestone & Dynamic Island Widgets',
+      'title': 'AsInt Edge Mobile',
+      'sub': 'Field Telematics & Inspection Matrix',
       'url':
-          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/countdown%2F1st.webp?alt=media',
+          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/asint_edge%2Fsecond.webp?alt=media',
     },
     {
-      'title': 'Aura Luxury Commerce',
-      'sub': 'Fluid Retail & Checkout',
+      'title': 'AsInt Edge Mobile',
+      'sub': 'Hardware Bridge & Bluetooth Ultrasonic UT',
       'url':
-          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/ecom%2F1st.webp?alt=media',
+          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/asint_edge%2Fthird.webp?alt=media',
     },
     {
-      'title': 'Fitoose AI Fitness',
-      'sub': 'Camera Pose & Rep Detection',
+      'title': 'AsInt Edge Mobile',
+      'sub': 'Inspection Dashboard & Telemetry Logs',
       'url':
-          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/fitoose%2F1st.webp?alt=media',
+          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/asint_edge%2Ffourth.webp?alt=media',
     },
     {
-      'title': 'Awblo Logistics',
-      'sub': 'Courier Telematics & Route Mapping',
+      'title': 'AsInt IntelliSuite',
+      'sub': 'Asset Integrity & Digital Twin Inspection',
       'url':
-          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/awblo%2Fpic1_nexus6p-portrait.png?alt=media',
+          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/asint_intellisuite%2Ffirst.webp?alt=media',
+    },
+    {
+      'title': 'AsInt IntelliSuite',
+      'sub': 'Dynamic Form Engine & CML Workflow',
+      'url':
+          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/asint_intellisuite%2Fsecond.webp?alt=media',
+    },
+    {
+      'title': 'AsInt IntelliSuite',
+      'sub': 'Multi-Tenant Workspace & SAP BTP Sync',
+      'url':
+          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/asint_intellisuite%2Fthird.webp?alt=media',
+    },
+    {
+      'title': 'AsInt IntelliSuite',
+      'sub': 'Field Thickness & Ultrasonic Metrics',
+      'url':
+          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/asint_intellisuite%2Ffourth.webp?alt=media',
+    },
+    {
+      'title': 'Tawft UI Directory',
+      'sub': '100+ Production Flutter Widgets',
+      'url':
+          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/tawft%2Fshowcase.jpg?alt=media',
     },
   ];
 
@@ -175,18 +199,41 @@ class _HeroSectionState extends State<HeroSection> {
                   ],
                 ),
 
-                // Minimal Caption Underneath
+                // Minimal Caption & Navigation Indicators Underneath
                 div(
                   classes:
-                      'mt-4 flex flex-col items-center text-center gap-1',
+                      'mt-4 flex flex-col items-center text-center gap-1.5',
                   [
-                    span(
-                      classes: 'text-xs font-medium text-[#F4F4F5]',
-                      [text(activeShot['title']!)],
-                    ),
+                    div(classes: 'flex items-center gap-2', [
+                      span(
+                        classes: 'text-xs font-medium text-[#F4F4F5]',
+                        [text(activeShot['title']!)],
+                      ),
+                      span(
+                        classes:
+                            'text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/[0.08] text-[#A1A1AA]',
+                        [
+                          text(
+                            '${_currentShotIndex + 1} / ${_showcaseScreenshots.length}',
+                          ),
+                        ],
+                      ),
+                    ]),
                     span(
                       classes: 'text-[11px] font-mono text-[#71717A]',
                       [text(activeShot['sub']!)],
+                    ),
+                    // Micro dot indicators
+                    div(
+                      classes: 'flex items-center gap-1 mt-1',
+                      List.generate(
+                        _showcaseScreenshots.length,
+                        (index) => span(
+                          classes:
+                              'h-1 rounded-full transition-all duration-200 ${index == _currentShotIndex ? "bg-white w-3" : "bg-white/20 w-1"}',
+                          [],
+                        ),
+                      ),
                     ),
                   ],
                 ),
