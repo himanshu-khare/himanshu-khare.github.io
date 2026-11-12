@@ -14,6 +14,7 @@ class _WorkGalleryState extends State<WorkGallery> {
   ProjectModel? _lightboxProject;
   int _lightboxImageIndex = 0;
   final Set<String> _expandedProjectIds = {};
+  int _visibleArchiveCount = 10;
 
   void _openLightbox(ProjectModel project) {
     setState(() {
@@ -35,6 +36,12 @@ class _WorkGalleryState extends State<WorkGallery> {
       } else {
         _expandedProjectIds.add(id);
       }
+    });
+  }
+
+  void _loadMoreArchive() {
+    setState(() {
+      _visibleArchiveCount += 10;
     });
   }
 
@@ -93,7 +100,7 @@ class _WorkGalleryState extends State<WorkGallery> {
                 ]),
                 span(
                   classes: 'text-xs font-mono text-[#71717A]',
-                  [text('Firebase Storage Synced • Click to Preview')],
+                  [text('Click to Preview')],
                 ),
               ],
             ),
@@ -101,8 +108,28 @@ class _WorkGalleryState extends State<WorkGallery> {
             div(
               classes:
                   'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6',
-              archive.map((p) => _buildArchiveCard(p)).toList(),
+              archive
+                  .take(_visibleArchiveCount)
+                  .map((p) => _buildArchiveCard(p))
+                  .toList(),
             ),
+
+            if (_visibleArchiveCount < archive.length)
+              div(
+                classes: 'flex justify-center pt-6',
+                [
+                  button(
+                    events: {'click': (_) => _loadMoreArchive()},
+                    classes:
+                        'flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-mono font-medium text-[#D4D4D8] hover:text-white bg-[#141416] hover:bg-[#1E1E22] border border-white/[0.08] hover:border-white/[0.2] transition-all cursor-pointer shadow-sm focus:outline-none',
+                    [
+                      text(
+                        'Load More Projects (${archive.length - _visibleArchiveCount} remaining) ↓',
+                      ),
+                    ],
+                  ),
+                ],
+              ),
           ]),
         ]),
 
