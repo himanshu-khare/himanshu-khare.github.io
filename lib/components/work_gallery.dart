@@ -209,7 +209,11 @@ class _WorkGalleryState extends State<WorkGallery> {
             div(
               classes:
                   'absolute bottom-2 right-2 px-2 py-0.5 rounded text-[10px] font-mono bg-black/80 text-white/90 border border-white/10 backdrop-blur-sm',
-              [text('${project.fileNames.length} Screens')],
+              [
+                text(
+                  '${project.fileNames.length} ${project.fileNames.length == 1 ? "Screen" : "Screens"}',
+                ),
+              ],
             ),
           ],
         ),
