@@ -85,21 +85,14 @@ class _HeroSectionState extends State<HeroSection> {
                 ],
               ),
 
-              // Detailed Technical Bio
-              div(
+              // Senior Mobile Engineer Overview (Single Paragraph)
+              p(
                 classes:
-                    'mt-6 max-w-2xl flex flex-col gap-3.5 text-base sm:text-[16px] text-[#A1A1AA] leading-[1.65] font-normal',
+                    'mt-6 max-w-xl text-base sm:text-[17px] text-[#A1A1AA] leading-[1.65] font-normal',
                 [
-                  p([
-                    text(
-                      "I'm Himanshu Khare, a Senior Mobile Engineer with 6.5+ years of experience engineering high-performance production applications across Flutter, Native Android (Kotlin), and iOS (Swift). I specialize in offline-first SQLite architectures, background Dart Isolates for zero-jank 60 FPS data processing, and native Bluetooth hardware bridges via Pigeon and Kotlin Coroutines.",
-                    ),
-                  ]),
-                  p([
-                    text(
-                      "As the solo mobile architect, I engineered and shipped AsInt IntelliSuite and AsInt Edge to production with server-driven dynamic form engines and atomic SAP BTP synchronization. Previously, I revamped 29 mission-critical trading modules for Motilal Oswal using BLoC and binary Protobuf streaming, and authored Tawft UI—an open-source design system of 100+ production-grade Flutter components.",
-                    ),
-                  ]),
+                  text(
+                    'Senior Mobile Engineer with 6.5+ years of experience architecting and shipping high-performance applications across Flutter, Native Android (Kotlin), and iOS (Swift). Focused on scalable client architecture, offline-first data synchronization, native platform integrations, and fluid 60 FPS interactions—engineering resilient mobile products from initial concept to store release.',
+                  ),
                 ],
               ),
 
