@@ -14,7 +14,7 @@ class _WorkGalleryState extends State<WorkGallery> {
   ProjectModel? _lightboxProject;
   int _lightboxImageIndex = 0;
   final Set<String> _expandedProjectIds = {};
-  int _visibleArchiveCount = 10;
+  int _visibleArchiveCount = 9;
 
   void _openLightbox(ProjectModel project) {
     setState(() {
@@ -41,7 +41,7 @@ class _WorkGalleryState extends State<WorkGallery> {
 
   void _loadMoreArchive() {
     setState(() {
-      _visibleArchiveCount += 10;
+      _visibleArchiveCount += 9;
     });
   }
 
