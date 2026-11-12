@@ -13,6 +13,7 @@ class WorkGallery extends StatefulComponent {
 class _WorkGalleryState extends State<WorkGallery> {
   ProjectModel? _lightboxProject;
   int _lightboxImageIndex = 0;
+  final Set<String> _expandedProjectIds = {};
 
   void _openLightbox(ProjectModel project) {
     setState(() {
@@ -24,6 +25,16 @@ class _WorkGalleryState extends State<WorkGallery> {
   void _closeLightbox() {
     setState(() {
       _lightboxProject = null;
+    });
+  }
+
+  void _toggleExpand(String id) {
+    setState(() {
+      if (_expandedProjectIds.contains(id)) {
+        _expandedProjectIds.remove(id);
+      } else {
+        _expandedProjectIds.add(id);
+      }
     });
   }
 
@@ -102,9 +113,11 @@ class _WorkGalleryState extends State<WorkGallery> {
   }
 
   Component _buildFeaturedCard(ProjectModel project) {
+    final isExpanded = _expandedProjectIds.contains(project.id);
+
     return div(
       classes:
-          'card-clean p-6 flex flex-col justify-between gap-6 group text-left',
+          'card-clean p-6 flex flex-col justify-between gap-6 group text-left transition-all',
       [
         div(classes: 'flex flex-col gap-3', [
           div(classes: 'flex items-center justify-between', [
@@ -137,11 +150,23 @@ class _WorkGalleryState extends State<WorkGallery> {
             [text(project.title)],
           ),
 
-          p(
-            classes:
-                'text-xs sm:text-[13px] text-[#A1A1AA] leading-relaxed line-clamp-4',
-            [text(project.description)],
-          ),
+          div(classes: 'flex flex-col gap-2', [
+            p(
+              classes: isExpanded
+                  ? 'text-xs sm:text-[13px] text-[#A1A1AA] leading-relaxed max-h-48 overflow-y-auto pr-1'
+                  : 'text-xs sm:text-[13px] text-[#A1A1AA] leading-relaxed line-clamp-3',
+              [text(project.description)],
+            ),
+            if (project.description.length > 120)
+              button(
+                classes:
+                    'self-start text-[11px] font-mono text-[#71717A] hover:text-[#F4F4F5] transition-colors cursor-pointer bg-white/[0.04] hover:bg-white/[0.08] px-2 py-0.5 rounded border border-white/[0.06] flex items-center gap-1.5 focus:outline-none',
+                events: {'click': (_) => _toggleExpand(project.id)},
+                [
+                  text(isExpanded ? 'Read less ↑' : 'Read more ↓'),
+                ],
+              ),
+          ]),
         ]),
 
         // Tech stack tag list
