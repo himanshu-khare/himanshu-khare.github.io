@@ -85,14 +85,21 @@ class _HeroSectionState extends State<HeroSection> {
                 ],
               ),
 
-              // Short Bio
-              p(
+              // Detailed Technical Bio
+              div(
                 classes:
-                    'text-base sm:text-[17px] text-[#A1A1AA] leading-[1.6] mt-6 max-w-xl font-normal',
+                    'mt-6 max-w-2xl flex flex-col gap-3.5 text-base sm:text-[16px] text-[#A1A1AA] leading-[1.65] font-normal',
                 [
-                  text(
-                    "I'm Himanshu Khare, a mobile engineer with 6.5+ years of experience shipping across Flutter, Android (Kotlin), and iOS (Swift). I architected AsInt IntelliSuite & AsInt Edge from scratch, revamped 29 trading modules for Motilal Oswal, and built the Tawft UI library.",
-                  ),
+                  p([
+                    text(
+                      "I'm Himanshu Khare, a Senior Mobile Engineer with 6.5+ years of experience engineering high-performance production applications across Flutter, Native Android (Kotlin), and iOS (Swift). I specialize in offline-first SQLite architectures, background Dart Isolates for zero-jank 60 FPS data processing, and native Bluetooth hardware bridges via Pigeon and Kotlin Coroutines.",
+                    ),
+                  ]),
+                  p([
+                    text(
+                      "As the solo mobile architect, I engineered and shipped AsInt IntelliSuite and AsInt Edge to production with server-driven dynamic form engines and atomic SAP BTP synchronization. Previously, I revamped 29 mission-critical trading modules for Motilal Oswal using BLoC and binary Protobuf streaming, and authored Tawft UI—an open-source design system of 100+ production-grade Flutter components.",
+                    ),
+                  ]),
                 ],
               ),
 
