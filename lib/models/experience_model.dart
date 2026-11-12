@@ -3,11 +3,13 @@ class ExperienceItem {
   final String role;
   final String dates;
   final String description;
+  final List<String> bullets;
 
   const ExperienceItem({
     required this.company,
     required this.role,
     required this.dates,
     required this.description,
+    this.bullets = const [],
   });
 }

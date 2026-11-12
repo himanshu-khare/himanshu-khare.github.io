@@ -269,17 +269,17 @@ class _WorkGalleryState extends State<WorkGallery> {
     final activeUrl = images[_lightboxImageIndex];
 
     return div(
-      classes: 'lightbox-backdrop relative',
+      classes: 'lightbox-backdrop',
       [
         // Separate backdrop overlay behind modal: clicking outside closes dialog
         div(
-          classes: 'absolute inset-0 cursor-pointer',
+          classes: 'modal-overlay',
           events: {'click': (_) => _closeLightbox()},
           [],
         ),
 
         div(
-          classes: 'lightbox-content relative z-10',
+          classes: 'lightbox-content',
           [
             // Header
             div(
