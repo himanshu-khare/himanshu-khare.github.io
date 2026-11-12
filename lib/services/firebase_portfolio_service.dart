@@ -31,7 +31,7 @@ class FirebasePortfolioService {
       techStack: ['Flutter', 'Drift (SQLite)', 'Riverpod', 'Dart Isolates', 'Pigeon', 'Kotlin', 'SAP BTP'],
       architectureMetrics: {'Architecture': 'Offline-First SSOT', 'Hardware': 'Bluetooth UT Gauge'},
       architectureFlow: 'UI -> Riverpod -> Drift SQLite -> Worker Isolates -> Pigeon BLE -> SAP BTP',
-      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.asint.intellisuite',
+      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.asint.edgeapp&hl=en-IN',
       isFlagship: true,
     ),
     ProjectModel(
@@ -46,7 +46,7 @@ class FirebasePortfolioService {
       techStack: ['Flutter', 'BLoC', 'Protocol Buffers (Protobuf)', 'WebSockets', 'App Flavours'],
       architectureMetrics: {'Modules': '29 Trading Desks', 'Latency': '< 15ms Binary Stream'},
       architectureFlow: 'Market Feed -> Binary Protobuf -> BLoC Event Pipeline -> Virtualized Slivers',
-      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.motilaloswal.invest',
+      playStoreUrl: 'https://play.google.com/store/apps/details?id=mosl.powerapp.com&hl=en-IN',
       isFlagship: true,
     ),
     ProjectModel(
