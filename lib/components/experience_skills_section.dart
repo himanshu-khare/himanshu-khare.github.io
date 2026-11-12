@@ -8,68 +8,79 @@ class ExperienceSkillsSection extends StatelessComponent {
   static const List<ExperienceItem> _experiences = [
     ExperienceItem(
       company: 'AsInt Inc.',
-      role: 'Senior Mobile Developer',
+      role: 'Mobile Application Developer (Solo Mobile Architect)',
       dates: 'Jan 2024 – Present',
       description:
-          'Solo architect for 2 live Play Store apps (AsInt IntelliSuite & AsInt Edge). Offline-First SSOT with Drift (SQLite) + Riverpod; Server-Driven Dynamic Forms; background Dart Isolates; Bluetooth Wireless UT hardware bridge via Pigeon and Kotlin Coroutines.',
+          'Independently architected from scratch and maintain 2 live Play Store enterprise apps (AsInt IntelliSuite & AsInt Edge). Designed an Offline-First SSOT data layer with Drift (SQLite) and Riverpod with atomic SAP BTP sync. Built a Server-Driven Dynamic Form Engine & CML workflows, offloading large JSON parsing to Dart Isolates. Bridged Bluetooth Wireless Ultrasonic Testing (UT) hardware via Pigeon, Method/EventChannel, and Kotlin Coroutines.',
     ),
     ExperienceItem(
       company: 'StockyDodo',
       role: 'Asst. Engineer Manager - Flutter',
       dates: 'Aug 2023 – Nov 2023',
       description:
-          'Delivered core features across Flutter Mobile & Web for Real-Money Gaming platform. Revamped authentication flows, nested deep-link notification routing, and MoEngage analytics pipelines.',
+          'Delivered core features across Flutter Mobile and Web for a Real-Money Gaming (RMG) financial platform, resolving 36+ critical feature and production tickets. Revamped authentication and registration flows, nested deep-link notification routing, and MoEngage analytics pipelines.',
     ),
     ExperienceItem(
-      company: 'Finoux Solutions (Motilal Oswal)',
+      company: 'Finoux Solutions Pvt. Ltd.',
       role: 'Flutter Developer',
       dates: 'Jan 2023 – Jul 2023',
       description:
-          'Architected and revamped 29 core trading modules with unified light-theme design system, BLoC state machines, low-latency binary Protocol Buffers (Protobuf) streams, and multi-environment flavours.',
+          'Architected and revamped 29 core trading modules for the Motilal Oswal Stock Broking trader app, delivering a unified light-theme design system. Implemented BLoC state management, integrated binary Protocol Buffers (Protobuf) for low-latency market streams, and configured multi-environment Flutter App Flavours.',
     ),
     ExperienceItem(
       company: 'MindfulMachine Pvt. Ltd.',
       role: 'Mobile Application Developer',
       dates: 'Mar 2020 – Dec 2022',
       description:
-          'Shipped 25+ commercial apps across Flutter, Android, iOS. Built full-stack Smart Parking IoT app with Node.js/TypeScript/MongoDB, audio podcast streaming with AWS Cognito, and ConnectyCube WebRTC chat.',
+          'Owned end-to-end delivery from Figma/XD prototyping to Play Store & App Store release across Flutter, Native Android, and iOS for international clients. Built a full-stack smart Parking App (Node.js, TypeScript & MongoDB) and audio podcast streaming with AWS Cognito, Razorpay, Google Maps, and ConnectyCube.',
     ),
   ];
 
   static const Map<String, List<String>> _skillGroups = {
-    'Mobile & Core': [
-      'Flutter (Android, iOS, Web)',
+    'Languages & Web': [
       'Dart',
-      'Native Android (Kotlin)',
-      'Native iOS (Swift)',
+      'Kotlin',
+      'Swift',
       'Java',
       'TypeScript',
-      'Jaspr (Dart Web)',
+      'JavaScript',
+      'Jaspr (Jasper)',
     ],
-    'Architecture & Data': [
+    'Mobile & UI': [
+      'Flutter (Android, iOS, Web)',
+      'Native Android (Kotlin, Gradle)',
+      'iOS (Swift, CocoaPods) Integration',
+      '100+ UI Widgets',
+    ],
+    'Architecture & State': [
       'Clean Architecture',
-      'Offline-First (SSOT)',
       'Riverpod',
-      'BLoC Pattern',
+      'BLoC',
+      'GetX',
+      'Offline-First (SSOT)',
+      'Multi-Tenant',
+      'Server-Driven UI',
+    ],
+    'Data & Native Bridge': [
       'Drift (SQLite)',
-      'Protocol Buffers (Protobuf)',
+      'Protobuf',
       'Dart Isolates',
+      'Pigeon',
+      'MethodChannel',
+      'EventChannel',
+      'Kotlin Coroutines',
     ],
-    'Native Integration': [
-      'Pigeon Type-Safe IPC',
-      'MethodChannel & EventChannel',
-      'Kotlin Coroutines (Dispatchers.IO)',
-      'Android WorkManager',
-      'Bluetooth LE Hardware SDKs',
-    ],
-    'Backend & Cloud': [
+    'Cloud & Delivery': [
       'Supabase',
       'SAP BTP Sync',
-      'AWS Cognito & Amplify',
+      'AWS Cognito',
       'Firebase',
-      'Node.js & MongoDB',
-      'WebSockets & REST',
-      'CI/CD Pipelines',
+      'Node.js',
+      'MongoDB',
+      'REST',
+      'WebSockets',
+      'CI/CD',
+      'Git',
     ],
   };
 
