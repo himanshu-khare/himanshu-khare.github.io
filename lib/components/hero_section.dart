@@ -106,15 +106,7 @@ class _HeroSectionState extends State<HeroSection> {
       'url':
           'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/yellowplate%2F1st.webp?alt=media',
     },
-    // 9. Freedow Decentralized Wallet (Web3 / Crypto)
-    {
-      'title': 'Freedow Crypto Wallet',
-      'category': 'Web3 & Crypto',
-      'sub': 'Non-Custodial Multi-Chain Asset Management',
-      'url':
-          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/freedow%2F1st.webp?alt=media',
-    },
-    // 10. Karpak Smart Mobility (Smart City / IoT)
+    // 9. Karpak Smart Mobility (Smart City / IoT)
     {
       'title': 'Karpak Smart Parking',
       'category': 'IoT & Mobility',
