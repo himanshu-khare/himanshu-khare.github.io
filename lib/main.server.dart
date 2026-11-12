@@ -22,7 +22,7 @@ void main() {
       'author': 'Himanshu Khare',
       'og:title': 'Himanshu Khare — Senior Mobile Developer',
       'og:description':
-          'Senior Mobile Developer building offline-first Flutter & native apps.',
+          'Senior Mobile Developer building Flutter & native apps.',
       'og:type': 'website',
       'og:url': 'https://himanshu-khare.github.io/',
     },

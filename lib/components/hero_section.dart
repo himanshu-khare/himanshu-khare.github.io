@@ -81,7 +81,7 @@ class _HeroSectionState extends State<HeroSection> {
                 classes:
                     'text-3xl sm:text-4xl lg:text-[42px] font-semibold text-[#F4F4F5] tracking-[-0.03em] leading-[1.15]',
                 [
-                  text('Senior Mobile Developer building offline-first Flutter & native apps.'),
+                  text('Senior Mobile Developer building Flutter & native apps.'),
                 ],
               ),
 
