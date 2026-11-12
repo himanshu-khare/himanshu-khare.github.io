@@ -155,19 +155,6 @@ class ExperienceSkillsSection extends StatelessComponent {
               }).toList(),
             ),
           ]),
-
-          // Education Line
-          div(
-            classes:
-                'pt-8 border-t border-white/[0.08] flex flex-col sm:flex-row justify-between sm:items-center gap-2 text-xs text-[#71717A] font-mono',
-            [
-              div([
-                strong(classes: 'text-[#A1A1AA] font-medium', [text('Education: ')]),
-                text('B.Sc. (Hons.) in Computer Science — Dyal Singh College, University of Delhi'),
-              ]),
-              span([text('2017 – 2020')]),
-            ],
-          ),
         ]),
       ],
     );

@@ -269,12 +269,17 @@ class _WorkGalleryState extends State<WorkGallery> {
     final activeUrl = images[_lightboxImageIndex];
 
     return div(
-      classes: 'lightbox-backdrop',
-      events: {'click': (_) => _closeLightbox()},
+      classes: 'lightbox-backdrop relative',
       [
+        // Separate backdrop overlay behind modal: clicking outside closes dialog
         div(
-          classes: 'lightbox-content',
-          events: {'click': (e) {}},
+          classes: 'absolute inset-0 cursor-pointer',
+          events: {'click': (_) => _closeLightbox()},
+          [],
+        ),
+
+        div(
+          classes: 'lightbox-content relative z-10',
           [
             // Header
             div(
@@ -324,7 +329,7 @@ class _WorkGalleryState extends State<WorkGallery> {
                       }
                     },
                     classes:
-                        'absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/70 hover:bg-black text-white border border-white/20 flex items-center justify-center cursor-pointer text-sm font-mono backdrop-blur-sm',
+                        'absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/70 hover:bg-black text-white border border-white/20 flex items-center justify-center cursor-pointer text-sm font-mono backdrop-blur-sm z-20',
                     [text('←')],
                   ),
                   button(
@@ -337,7 +342,7 @@ class _WorkGalleryState extends State<WorkGallery> {
                       }
                     },
                     classes:
-                        'absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/70 hover:bg-black text-white border border-white/20 flex items-center justify-center cursor-pointer text-sm font-mono backdrop-blur-sm',
+                        'absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/70 hover:bg-black text-white border border-white/20 flex items-center justify-center cursor-pointer text-sm font-mono backdrop-blur-sm z-20',
                     [text('→')],
                   ),
                 ],

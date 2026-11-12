@@ -16,7 +16,7 @@ class Footer extends StatelessComponent {
           [
             div(classes: 'flex flex-col gap-1', [
               span(classes: 'text-[#F4F4F5] font-semibold font-sans text-sm', [text('Himanshu Khare')]),
-              span([text('Senior Mobile Systems Architect • Delhi NCR, India')]),
+              span([text('Senior Mobile App Developer • Delhi NCR, India')]),
             ]),
 
             div(classes: 'flex flex-wrap items-center gap-6', [
