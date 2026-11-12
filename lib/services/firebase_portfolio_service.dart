@@ -70,6 +70,30 @@ class FirebasePortfolioService {
   /// Production & Client Archive (Real files in Firebase Storage)
   static const List<ProjectModel> archiveProjects = [
     ProjectModel(
+      id: 'asint-edge-archive',
+      title: 'AsInt Edge Mobile',
+      tagLine: 'Industrial ultrasonic inspection & offline SSOT',
+      description: 'Native Bluetooth ultrasonic testing gauge integration with background Dart isolates and Drift SQLite sync.',
+      category: ProjectCategory.enterprise,
+      folderName: 'asint_edge',
+      fileNames: ['first.webp', 'second.webp', 'third.webp', 'fourth.webp', 'fifth.webp', 'six.webp', 'seventh.webp', 'eigth.webp'],
+      techStack: ['Flutter', 'Drift SQLite', 'Pigeon', 'BLE', 'Kotlin'],
+      architectureMetrics: {'Engine': 'Drift SSOT'},
+      architectureFlow: 'BLE Gauge -> Pigeon -> Drift SQLite -> SAP BTP',
+    ),
+    ProjectModel(
+      id: 'yellowplate-app',
+      title: 'YellowPlate Mobility',
+      tagLine: 'Enterprise cab fleet dispatch & route telematics',
+      description: 'Fleet orchestration platform with real-time GPS telemetry, background battery preservation, and driver dispatch.',
+      category: ProjectCategory.enterprise,
+      folderName: 'yellowplate',
+      fileNames: ['1st.webp', '2nd.webp', '3rd.webp'],
+      techStack: ['Flutter', 'Google Maps', 'WebSockets', 'Hive'],
+      architectureMetrics: {'Dispatch': 'Real-Time'},
+      architectureFlow: 'GPS Stream -> WebSocket Gateway -> Driver Routing',
+    ),
+    ProjectModel(
       id: 'motilal-archive',
       title: 'Motilal Oswal Trading Desk',
       tagLine: 'High-frequency stock broking & market depth',

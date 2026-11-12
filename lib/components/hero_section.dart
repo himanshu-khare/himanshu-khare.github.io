@@ -12,61 +12,115 @@ class HeroSection extends StatefulComponent {
 class _HeroSectionState extends State<HeroSection> {
   int _currentShotIndex = 0;
 
-  // Real app screenshots hosted in Firebase Storage (asint_edge, asint_intellisuite, tawft)
+  // High-impact real mobile screenshots from Firebase Storage (portfolio-e3e4a.appspot.com)
   static final List<Map<String, String>> _showcaseScreenshots = [
+    // 1. AsInt Edge (Enterprise Hardware / Ultrasonic Testing)
     {
       'title': 'AsInt Edge Mobile',
+      'category': 'Enterprise IoT',
       'sub': 'Offline-First Edge Inspection & Drift SQLite',
       'url':
           'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/asint_edge%2Ffirst.webp?alt=media',
     },
     {
       'title': 'AsInt Edge Mobile',
-      'sub': 'Field Telematics & Inspection Matrix',
-      'url':
-          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/asint_edge%2Fsecond.webp?alt=media',
-    },
-    {
-      'title': 'AsInt Edge Mobile',
-      'sub': 'Hardware Bridge & Bluetooth Ultrasonic UT',
+      'category': 'Hardware Bridge',
+      'sub': 'Bluetooth Wireless Ultrasonic Testing (UT)',
       'url':
           'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/asint_edge%2Fthird.webp?alt=media',
     },
-    {
-      'title': 'AsInt Edge Mobile',
-      'sub': 'Inspection Dashboard & Telemetry Logs',
-      'url':
-          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/asint_edge%2Ffourth.webp?alt=media',
-    },
+    // 2. AsInt IntelliSuite (Industrial Asset Integrity / Digital Twin)
     {
       'title': 'AsInt IntelliSuite',
+      'category': 'Industrial Systems',
       'sub': 'Asset Integrity & Digital Twin Inspection',
       'url':
           'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/asint_intellisuite%2Ffirst.webp?alt=media',
     },
     {
       'title': 'AsInt IntelliSuite',
-      'sub': 'Dynamic Form Engine & CML Workflow',
+      'category': 'Enterprise Forms',
+      'sub': 'Server-Driven Dynamic Form Engine & CML',
       'url':
           'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/asint_intellisuite%2Fsecond.webp?alt=media',
     },
+    // 3. Motilal Oswal Trader (Fintech & Stock Broking)
     {
-      'title': 'AsInt IntelliSuite',
-      'sub': 'Multi-Tenant Workspace & SAP BTP Sync',
+      'title': 'Motilal Oswal Trader',
+      'category': 'Fintech & Trading',
+      'sub': 'Live Market Depth & Binary Protobuf Stream',
       'url':
-          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/asint_intellisuite%2Fthird.webp?alt=media',
+          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/mo-trader%2F1st.webp?alt=media',
     },
     {
-      'title': 'AsInt IntelliSuite',
-      'sub': 'Field Thickness & Ultrasonic Metrics',
+      'title': 'Motilal Oswal Trader',
+      'category': 'High-Frequency Orders',
+      'sub': 'Multi-Asset Portfolio & Options Chain',
       'url':
-          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/asint_intellisuite%2Ffourth.webp?alt=media',
+          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/mo-trader%2F2nd.webp?alt=media',
     },
+    // 4. Tawft UI (Flutter Design System & Web Showcase)
     {
       'title': 'Tawft UI Directory',
-      'sub': '100+ Production Flutter Widgets',
+      'category': 'UI Architecture',
+      'sub': '100+ Production Flutter Widgets & Components',
       'url':
           'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/tawft%2Fshowcase.jpg?alt=media',
+    },
+    // 5. Aura Luxury Commerce (E-Commerce)
+    {
+      'title': 'Aura Luxury Commerce',
+      'category': 'E-Commerce',
+      'sub': 'Fluid Retail Showcase & One-Tap Checkout',
+      'url':
+          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/ecom%2F1st.webp?alt=media',
+    },
+    {
+      'title': 'Aura Luxury Commerce',
+      'category': 'E-Commerce',
+      'sub': 'Product Inspector & Interactive Filters',
+      'url':
+          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/ecom%2F2nd.webp?alt=media',
+    },
+    // 6. Fitoose AI Fitness (Computer Vision)
+    {
+      'title': 'Fitoose AI Fitness',
+      'category': 'Computer Vision',
+      'sub': 'Real-Time Camera Pose & Repetition Detection',
+      'url':
+          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/fitoose%2F1st.webp?alt=media',
+    },
+    // 7. Countdown Habits & Events (iOS & Android Widgets)
+    {
+      'title': 'Countdown Events',
+      'category': 'OS Widgets',
+      'sub': 'iOS Dynamic Island Activities & Glance Widgets',
+      'url':
+          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/countdown%2F1st.webp?alt=media',
+    },
+    // 8. YellowPlate Mobility (Fleet Telematics & On-Demand Dispatch)
+    {
+      'title': 'YellowPlate Mobility',
+      'category': 'Fleet Logistics',
+      'sub': 'Enterprise Cab Dispatch & Real-Time Telematics',
+      'url':
+          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/yellowplate%2F1st.webp?alt=media',
+    },
+    // 9. Freedow Decentralized Wallet (Web3 / Crypto)
+    {
+      'title': 'Freedow Crypto Wallet',
+      'category': 'Web3 & Crypto',
+      'sub': 'Non-Custodial Multi-Chain Asset Management',
+      'url':
+          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/freedow%2F1st.webp?alt=media',
+    },
+    // 10. Karpak Smart Mobility (Smart City / IoT)
+    {
+      'title': 'Karpak Smart Parking',
+      'category': 'IoT & Mobility',
+      'sub': 'Sensor Guidance & IoT Urban Parking Matrix',
+      'url':
+          'https://firebasestorage.googleapis.com/v0/b/portfolio-e3e4a.appspot.com/o/karpak%2F1st.webp?alt=media',
     },
   ];
 
@@ -204,14 +258,20 @@ class _HeroSectionState extends State<HeroSection> {
                   classes:
                       'mt-4 flex flex-col items-center text-center gap-1.5',
                   [
-                    div(classes: 'flex items-center gap-2', [
+                    div(classes: 'flex items-center gap-2 flex-wrap justify-center', [
+                      if (activeShot['category'] != null)
+                        span(
+                          classes:
+                              'text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/[0.08] text-[#F4F4F5] border border-white/[0.1]',
+                          [text(activeShot['category']!)],
+                        ),
                       span(
-                        classes: 'text-xs font-medium text-[#F4F4F5]',
+                        classes: 'text-xs font-semibold text-[#F4F4F5]',
                         [text(activeShot['title']!)],
                       ),
                       span(
                         classes:
-                            'text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/[0.08] text-[#A1A1AA]',
+                            'text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/[0.06] text-[#71717A]',
                         [
                           text(
                             '${_currentShotIndex + 1} / ${_showcaseScreenshots.length}',
@@ -220,12 +280,13 @@ class _HeroSectionState extends State<HeroSection> {
                       ),
                     ]),
                     span(
-                      classes: 'text-[11px] font-mono text-[#71717A]',
+                      classes: 'text-[11px] font-mono text-[#A1A1AA]',
                       [text(activeShot['sub']!)],
                     ),
                     // Micro dot indicators
                     div(
-                      classes: 'flex items-center gap-1 mt-1',
+                      classes:
+                          'flex items-center gap-1 mt-1 max-w-[280px] flex-wrap justify-center',
                       List.generate(
                         _showcaseScreenshots.length,
                         (index) => span(
